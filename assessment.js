@@ -6,7 +6,12 @@
  */
 
 // CODE HERE
-
+let me = {
+  firstname: 'bow',
+  age: 2,
+  state: 'NY',
+  // faveColor: 'black'
+}
 /**
  * #2
  *
@@ -15,7 +20,7 @@
  */
 
 // CODE HERE
-
+me.faveColor = 'black'
 /**
  * #3
  *
@@ -30,7 +35,7 @@ var message = {
 };
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
-
+message.text = 'Yes'
 /**
  * #4
  *
@@ -40,7 +45,16 @@ var message = {
  */
 
 // CODE HERE
-
+let adjustCount = {
+  upVote (num) {
+    num++
+    return num
+  },
+  downVote (num) {
+    num--
+    return num
+  }
+}
 /**
  * #5
  *
@@ -48,7 +62,7 @@ var message = {
  */
 
 // CODE HERE
-
+let myFriends = ['j.cole', 'lupe', 'colbie', 'ari lennox']
 /**
  * #6
  *
@@ -56,7 +70,7 @@ var message = {
  */
 
 // CODE HERE
-
+myFriends.push('hannah montana')
 /**
  * #7
  *
@@ -68,6 +82,7 @@ var message = {
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+let myArrayCopy = [...myArray]
 
 /**
  * #8
@@ -81,6 +96,14 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
   // CODE HERE
+  let evens = []
+  for (let i = 0; i < myNumbers.length; i++){
+    if (myNumbers[i] % 2 === 0){
+      evens.push(myNumbers[i])
+  }
+}
+// console.log(evens)
+  return evens
 }
 
 /**
@@ -92,13 +115,17 @@ function evensOnly() {
 
 // CODE HERE
 var peopleIknow = [
-  { name: "Steve", friend: true },
-  { name: "Dan", friend: false },
-  { name: "Bart", friend: true },
-  { name: "Sarah", friend: false },
-  { name: "Michelle", friend: false },
-  { name: "Holly", friend: true }
+  { name: 'Steve', friend: true },
+  { name: 'Dan', friend: false },
+  { name: 'Bart', friend: true },
+  { name: 'Sarah', friend: false },
+  { name: 'Michelle', friend: false },
+  { name: 'Holly', friend: true }
 ];
+
+let trueFriends = peopleIknow.filter(function(val){
+  return val.friend == true;
+});
 
 /**
  * #10
@@ -110,3 +137,11 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+let indexes = []
+function indexFinder (arr, newArr) {
+  // let indexes = []
+  for (let i = 0; i < arr.length; i++){
+    newArr.push(i)
+  }
+  return newArr
+}
